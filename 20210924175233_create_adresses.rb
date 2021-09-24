@@ -3,10 +3,10 @@
 class CreateAdresses < ActiveRecord::Migration[6.1]
   def change
     create_table :adresses do |t|
-      t.integer :numero
-      t.string :rue
-      t.string :ville
-      t.string :province
+      t.integer :numero, null: false
+      t.string :rue, null:  false
+      t.string :ville, null:  false
+      t.string :province, null:  false
 
       t.timestamps
     end
